@@ -1,0 +1,30 @@
+CREATE DATABASE 'Projeto3'
+
+
+CREATE TABLE pacientes (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  sobrenome VARCHAR(50) NOT NULL,
+  idade DATE NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE
+  
+);
+
+CREATE TABLE psicologos (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(50) NOT NULL,
+  sobrenome VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  senha VARCHAR(255) NOT NULL,
+  especializacaoProfissional TEXT NOT NULL
+);
+
+CREATE TABLE atendimentos (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  data DATE NOT NULL,
+  hora TIME NOT NULL,
+  paciente_id INT NOT NULL,
+  psicologo_id INT NOT NULL,
+  CONSTRAINT FK_Paciente_ID FOREIGN KEY (paciente_id) REFERENCES pacientes(id),
+  CONSTRAINT FK_Psicologo_ID FOREIGN KEY (psicologo_id) REFERENCES psicologos(id)
+);
