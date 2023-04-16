@@ -1,5 +1,5 @@
-const Psicologos = require("../models/Psicologos");
-const bcrypt = require("bcryptjs");
+import Psicologos from "../models/Psicologos.js";
+import bcrypt from "bcryptjs";
 
 const psicologosController = {
   async cadastrarPsicologo(req, res) {
@@ -90,4 +90,4 @@ const psicologosController = {
   },
 };
 
-module.exports = psicologosController;
+export default psicologosController;
