@@ -1,13 +1,9 @@
-CREATE DATABASE 'Projeto3'
-
-
 CREATE TABLE pacientes (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(50) NOT NULL,
   sobrenome VARCHAR(50) NOT NULL,
   idade DATE NOT NULL,
   email VARCHAR(100) NOT NULL UNIQUE
-  
 );
 
 CREATE TABLE psicologos (
@@ -28,3 +24,10 @@ CREATE TABLE atendimentos (
   CONSTRAINT FK_Paciente_ID FOREIGN KEY (paciente_id) REFERENCES pacientes(id),
   CONSTRAINT FK_Psicologo_ID FOREIGN KEY (psicologo_id) REFERENCES psicologos(id)
 );
+Lembrando que é importante verificar a existência do banco de dados 'Projeto3' antes de executar essa query. Caso ele ainda não exista, pode-se utilizar a sintaxe CREATE DATABASE Projeto3; para criá-lo.
+
+
+
+
+
+Regenerate response
