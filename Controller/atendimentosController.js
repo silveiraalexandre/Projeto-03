@@ -1,4 +1,4 @@
-const { atendimentosModel, pacientesModel } = require("../models");
+const { atendimentosModel, pacientesModel } = require("../src/models");
 
 const atendimentosController = {
   async listarAtendimentos(req, res) {
@@ -6,10 +6,12 @@ const atendimentosController = {
       const { id } = req.params;
       const { psicologo_id, paciente_id } = req.body;
       if (!id) {
-        const listaDeAtendimentos = await atendimentosModel.listarTodosAtendimentos();
+        const listaDeAtendimentos =
+          await atendimentosModel.listarTodosAtendimentos();
         res.json(listaDeAtendimentos);
       } else {
-        const listaDeAtendimentos = await atendimentosModel.listarAtendimentosPorId(id);
+        const listaDeAtendimentos =
+          await atendimentosModel.listarAtendimentosPorId(id);
         res.json(listaDeAtendimentos);
       }
     } catch (error) {

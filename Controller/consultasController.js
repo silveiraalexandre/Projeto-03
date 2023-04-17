@@ -1,9 +1,10 @@
-const { atendimentosModel, pacientesModel } = require("../models");
+const { atendimentosModel, pacientesModel } = require("../src/models");
 
 const consultasController = {
   async listarTodosAtendimentos(req, res) {
     try {
-      const listaDeAtendimentos = await atendimentosModel.listarTodosAtendimentos();
+      const listaDeAtendimentos =
+        await atendimentosModel.listarTodosAtendimentos();
       return res.json(listaDeAtendimentos);
     } catch (error) {
       console.error(error);
@@ -14,11 +15,14 @@ const consultasController = {
   async listarAtendimentosPorId(req, res) {
     const { id } = req.params;
     try {
-      const listaDeAtendimentos = await atendimentosModel.listarAtendimentosPorId(id);
+      const listaDeAtendimentos =
+        await atendimentosModel.listarAtendimentosPorId(id);
       return res.json(listaDeAtendimentos);
     } catch (error) {
       console.error(error);
-      return res.status(500).json({ error: "Erro ao buscar atendimento por id" });
+      return res
+        .status(500)
+        .json({ error: "Erro ao buscar atendimento por id" });
     }
   },
 

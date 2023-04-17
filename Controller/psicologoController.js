@@ -1,4 +1,4 @@
-import Psicologos from "../models/Psicologos.js";
+import Psicologos from "../src/models/psicologos.js";
 import bcrypt from "bcryptjs";
 
 const psicologosController = {
