@@ -24,10 +24,3 @@ CREATE TABLE atendimentos (
   CONSTRAINT FK_Paciente_ID FOREIGN KEY (paciente_id) REFERENCES pacientes(id),
   CONSTRAINT FK_Psicologo_ID FOREIGN KEY (psicologo_id) REFERENCES psicologos(id)
 );
-Lembrando que é importante verificar a existência do banco de dados 'Projeto3' antes de executar essa query. Caso ele ainda não exista, pode-se utilizar a sintaxe CREATE DATABASE Projeto3; para criá-lo.
-
-
-
-
-
-Regenerate response
