@@ -1,5 +1,5 @@
-import express from "express";
-import db from "./db/db.js";
+const express = require("express");
+const db = require("./db/db.js");
 import routes from"./routes.js";
 
 const app = express();
