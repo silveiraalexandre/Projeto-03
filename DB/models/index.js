@@ -1,6 +1,4 @@
-import Atendimentos from "./atenddimentos/atendimentoModel.js";
-import Psicologos from "./psicologos/psicologosModel.js";
-import Pacientes from "./pacientes/pacientesModel.js";
+import Sequelize from "sequelize";
 
 const DB_NAME = "projeto-03"
 const DB_USER = "root"
@@ -9,20 +7,21 @@ const DB_CONFIG = {
   dialect: "mysql",
   host: "localhost",
   port:3000,
-
 }
 
-const Psicologo = sequelize.define('Psicologo', { name: DataTypes.STRING });
-const Paciente = sequelize.define('Paciente', { name: DataTypes.STRING });
+const sequelize = new Sequelize(DB_NAME, DB_USER, DB_DB_PASSWORD, DB_CONFIG);
+
+const Psicologo = sequelize.define('Psicologo', { name: Sequelize.STRING });
+const Paciente = sequelize.define('Paciente', { name: Sequelize.STRING });
 const Atendimento = sequelize.define('Atendimento', {
  
   PsicologoId: {
-    type: DataTypes.INTEGER,
+    type: Sequelize.INTEGER,
     references: {
       model: Psicologo,
       key: 'id'
     }
   }
 });
-Psicologo.belongsToMany(Paciente, { através: Atendimento });
-Paciente.belongsToMany(Psicologo, { através: Atendimento });
+Psicologo.belongsToMany(Paciente, { through: Atendimento });
+Paciente.belongsToMany(Psicologo, { through: Atendimento });
