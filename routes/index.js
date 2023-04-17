@@ -1,6 +1,6 @@
-import Sequelize from "sequelize";
+const Sequelize = require('sequelize');
 
-const DB_NAME = "projeto-03"
+const DB_NAME = "clinicaLavie"
 const DB_USER = "root"
 const DB_DB_PASSWORD = "mysql"
 const DB_CONFIG = {
