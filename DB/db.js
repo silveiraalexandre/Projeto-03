@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 
-const DB_NAME = "mydb";
+const DB_NAME = "clinicaLavie";
 const DB_USER = "root";
 const DB_PASS = ""; // senha do MySql
 const DB_CONFIG = {

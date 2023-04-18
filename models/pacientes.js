@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import db from "../db.js";
+import db from "../DB/db.js";
 
 const Pacientes = db.define("Pacientes", {
   id: {

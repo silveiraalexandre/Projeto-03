@@ -1,6 +1,6 @@
 const express = require ("express");
 const routes = require("./routes");
-const db = require("./src/connection");
+const db = require("./DB/db.js");
 const app = express();
 
 app.use(express.json());

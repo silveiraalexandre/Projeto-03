@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const { sequelize } = require("../routes/psicologoController.js");
+const { sequelize } = require("../Controller/psicologoController.js");
 
 const Pacientes = sequelize.define(
   "Pacientes",

@@ -2,14 +2,14 @@ const Sequelize = require('sequelize');
 
 const DB_NAME = "clinicaLavie"
 const DB_USER = "root"
-const DB_DB_PASSWORD = "mysql"
+const DB_PASS = "mysql"
 const DB_CONFIG = {
   dialect: "mysql",
   host: "localhost",
   port:3306,
 }
 
-const sequelize = new Sequelize(DB_NAME, DB_USER, DB_DB_PASSWORD, DB_CONFIG);
+const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASS, DB_CONFIG);
 
 const Psicologo = sequelize.define('Psicologo', { name: Sequelize.STRING });
 const Paciente = sequelize.define('Paciente', { name: Sequelize.STRING });

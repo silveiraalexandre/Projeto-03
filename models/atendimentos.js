@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const sequelize = require("../routes/src/atendimentosController.js");
+const sequelize = require("../Controller/atendimentosController.js");
 
 class Atendimentos extends Sequelize.Model {}
 

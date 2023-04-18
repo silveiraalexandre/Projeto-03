@@ -3,7 +3,7 @@ const psicologosController = require("../controllers/psicologosController");
 const pacientesController = require("../controllers/pacientesController");
 const atendimentosController = require("../controllers/atendimentosController");
 const authController = require("../controllers/authController");
-const pacienteCreateValidation = require("../src/validationpaciente");
+const pacienteCreateValidation = require("../validationpaciente");
 const authLoginValidation = require("../validations/auth/login");
 const auth = require("../middlewares/auth");
 
