@@ -1,5 +1,5 @@
 (async () => {
-  const database = require('./DB');
+  const database = require('../DB/db.js');
   await database.sync();
   })();
 

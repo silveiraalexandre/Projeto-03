@@ -1,6 +1,5 @@
 const Psicologos = require("../models/psicologos");
 const jwt = require("jsonwebtoken");
-const secret = require("../configs/secret");
 const bcrypt = require("bcryptjs");
 
 const authController = {

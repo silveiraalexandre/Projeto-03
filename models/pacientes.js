@@ -1,21 +1,21 @@
-import { Sequelize } from "sequelize";
-import db from "../DB/db.js";
+const Sequelize = require("sequelize");
+const db = require("../db.js");
 
 const Pacientes = db.define("Pacientes", {
   id: {
-    type: Sequelize.INTERGER.UNSIGNED,
+    type: Sequelize.INTEGER.UNSIGNED,
     primaryKey: true,
-    utoIncrement: true,
+    autoIncrement: true,
     allowNull: false,
   },
   nome: {
-    type: Sequelize.toString(200),
+    type: Sequelize.STRING(200),
     allowNull: false,
   },
   idade:{
-    type: Sequelize.Date,
+    type: Sequelize.DATE,
     allowNull: false,
   }
 });
 
-export default Pacientes;
+module.exports = Pacientes;
